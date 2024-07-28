@@ -1,0 +1,15 @@
+{{page-title "Index"}}
+
+<Navbar />
+
+<div class="bg-gray-500">
+  <Container>
+    <div class="grid grid-cols-4 gap-2">
+      {{! template-lint-disable no-implicit-this }}
+      {{#each this.model as |exercise|}}
+        <Exercise @exercise={{exercise}} />
+      {{/each}}
+    </div>
+  </Container>
+</div>
+{{outlet}}

@@ -1,1 +1,20 @@
-{{yield}}
+<div class="p-5">
+  <a href="#">
+    <h5
+      class="mb-2 text-xl tracking-tight text-gray-900 dark:text-white"
+    >{{@exercise.Title}}</h5>
+  </a>
+  <span
+    class="{{concat this.levelColor}}
+      text-xs font-medium me-2 px-2.5 py-0.5 rounded"
+  >{{@exercise.Level}}</span>
+  <span
+    class="{{concat this.bodyPartColor}}
+      text-xs font-medium me-2 px-2.5 py-0.5 rounded"
+  >{{@exercise.BodyPart}}</span>
+
+  <span
+    class="{{concat this.typeColor}}
+      text-xs font-medium me-2 px-2.5 py-0.5 rounded"
+  >{{@exercise.Type}}</span>
+</div>
