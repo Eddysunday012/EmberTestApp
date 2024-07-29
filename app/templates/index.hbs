@@ -2,9 +2,11 @@
 
 <Navbar />
 
-<div class="bg-gray-500">
+{{! <Sidebar /> }}
+
+<div class="bg-gray-700">
   <Container>
-    <div class="grid grid-cols-4 gap-2">
+    <div class="grid grid-cols-3 gap-2">
       {{! template-lint-disable no-implicit-this }}
       {{#each this.model as |exercise|}}
         <Exercise @exercise={{exercise}} />
