@@ -3,7 +3,7 @@ import { exercises } from '../data/exercises';
 
 export default class ApiService extends Service {
   getExercises(BodyPart = null, Equipment = null, Level = null, Type = null) {
-    let exerciseList = exercises;
+    let exerciseList = exercises.slice(0, 30);
     exerciseList = exerciseList.sort((a, b) => a.Title.localeCompare(b.Title));
     return exerciseList.filter((value) => {
       return (
@@ -13,5 +13,14 @@ export default class ApiService extends Service {
         (!Type || Type == value.Type)
       );
     });
+  }
+
+  searchExercises(query) {
+    let exerciseList = exercises;
+    return exerciseList
+      .filter((value) => {
+        return value.Title.toLowerCase().includes(query.toLowerCase());
+      })
+      .slice(0, 30);
   }
 }

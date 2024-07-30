@@ -1,10 +1,10 @@
 {{page-title "Index"}}
 
-<Navbar />
+<div class="bg-gray-700 w-full h-full">
+  <Navbar @searchQuery={{this.searchQuery}} />
 
-{{! <Sidebar /> }}
+  {{! <Sidebar /> }}
 
-<div class="bg-gray-700">
   <Container>
     <div class="grid grid-cols-3 gap-2">
       {{! template-lint-disable no-implicit-this }}
