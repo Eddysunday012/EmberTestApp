@@ -9,7 +9,9 @@
     <div class="grid grid-cols-3 gap-2">
       {{! template-lint-disable no-implicit-this }}
       {{#each this.model as |exercise|}}
-        <Exercise @exercise={{exercise}} />
+        <LinkTo @route="exercise" @model={{exercise.id}}>
+          <Exercise @exercise={{exercise}} />
+        </LinkTo>
       {{/each}}
     </div>
   </Container>
