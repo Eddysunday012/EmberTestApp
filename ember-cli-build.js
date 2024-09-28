@@ -11,6 +11,7 @@ module.exports = function (defaults) {
         cacheInclude: [/.*\.(css|scss|sass|less)$/],
         plugins: [
           { module: require('postcss-import') }, // If you installed postcss-import
+          require('tailwindcss'),
           require('tailwindcss')('./tailwind.config.js'), // If you have a Tailwind config file.
         ],
       },
